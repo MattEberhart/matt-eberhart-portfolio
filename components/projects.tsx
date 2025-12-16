@@ -1,0 +1,90 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Smartphone, Users, Camera, TrendingUp, ExternalLink } from "lucide-react"
+import Image from "next/image"
+
+export function Projects() {
+  return (
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30 scroll-mt-20">
+      <div className="container mx-auto max-w-5xl">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4">Projects</h2>
+        <p className="text-muted-foreground mb-12 text-balance">
+          {"Personal projects I've built to solve real problems and explore new technologies."}
+        </p>
+
+        <div className="grid gap-6">
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <div className="flex items-start justify-between gap-4">
+                <div className="space-y-2 flex-1">
+                  <CardTitle className="text-2xl">bndr</CardTitle>
+                  <CardDescription className="text-base">
+                    PWA and iOS app for tracking drinks and party stats with friends
+                  </CardDescription>
+                </div>
+                <div className="rounded-lg bg-[#6c4fb3] p-3">
+                  <Image src="/images/bndrlogo.png" alt="BNDR Logo" width={32} height={32} className="h-8 w-8" />
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="prose prose-sm text-muted-foreground max-w-none">
+                <p>
+                  A social app that helps friends track their night out adventures. Share photos, keep tabs on drinks,
+                  and create memorable stats from your gatherings.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-sm">
+                  <Users className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Social features for friend groups</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Camera className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Photo sharing and galleries</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <TrendingUp className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Track and visualize party statistics</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Button variant="default" asChild>
+                  <a href="https://mybndr.com" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Visit Website
+                  </a>
+                </Button>
+                <Button variant="outline" asChild>
+                  <a href="https://apps.apple.com/us/app/bndr/id6749908487" target="_blank" rel="noopener noreferrer">
+                    <Smartphone className="mr-2 h-4 w-4" />
+                    Download on App Store
+                  </a>
+                </Button>
+              </div>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                <Badge variant="secondary">Progressive Web App</Badge>
+                <Badge variant="secondary">iOS</Badge>
+                <Badge variant="secondary">Social</Badge>
+                <Badge variant="secondary">Photo Sharing</Badge>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-dashed">
+            <CardContent className="pt-6">
+              <div className="text-center py-8 space-y-2">
+                <p className="text-sm text-muted-foreground">{"More projects coming soon..."}</p>
+                <p className="text-xs text-muted-foreground">{"Currently working on new ideas and experiments"}</p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  )
+}
