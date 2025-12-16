@@ -116,6 +116,19 @@ export function Experience() {
               (2018)
             </p>
           </div>
+
+          <div className="border-l-2 border-muted pl-4">
+            <div className="flex items-start justify-between gap-4 mb-2">
+              <div>
+                <h4 className="font-semibold">Software Engineering Intern</h4>
+                <p className="text-muted-foreground">TwinThread</p>
+              </div>
+              <span className="text-sm text-muted-foreground whitespace-nowrap">Summer 2017</span>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Built web applications using React and modern JavaScript frameworks for IoT analytics platform
+            </p>
+          </div>
         </div>
 
         <div className="mt-12 space-y-8">

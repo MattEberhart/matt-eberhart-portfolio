@@ -9,7 +9,7 @@ export function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "projects", "experience", "photos"]
+      const sections = ["about", "projects", "experience"]
       const current = sections.find((section) => {
         const element = document.getElementById(section)
         if (element) {
@@ -48,7 +48,7 @@ export function Navigation() {
           </Link>
 
           <div className="flex items-center gap-1">
-            {["about", "projects", "experience", "photos"].map((section) => (
+            {["about", "projects", "experience"].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}

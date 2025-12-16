@@ -21,14 +21,14 @@ export function About() {
                       <span className="font-medium text-foreground">2025 - Present:</span> Oracle Health / Pharmacies AI
                     </p>
                     <p>
+                      <span className="font-medium text-foreground">2024 - Present:</span> BNDR LLC / Founder
+                    </p>
+                    <p>
                       <span className="font-medium text-foreground">2024 - 2025:</span> Microsoft / Copilot Studio
                     </p>
                     <p>
                       <span className="font-medium text-foreground">2021 - 2024:</span> Microsoft / Azure Cost
                       Management
-                    </p>
-                    <p>
-                      <span className="font-medium text-foreground">2024 - Present:</span> BNDR LLC / Founder
                     </p>
                   </div>
                 </div>
@@ -72,10 +72,16 @@ export function About() {
                 </div>
                 <div className="flex-1 space-y-2">
                   <h3 className="font-semibold text-lg">Education</h3>
-                  <div className="text-sm text-muted-foreground">
-                    <p className="font-medium text-foreground">Virginia Tech</p>
-                    <p>Bachelor of Arts in Spanish (2016 - 2021)</p>
-                    <p>Minors: Computer Science & Mathematics</p>
+                  <div className="space-y-3 text-sm text-muted-foreground">
+                    <div>
+                      <p className="font-medium text-foreground">Virginia Tech</p>
+                      <p>Bachelor of Arts in Spanish (2016 - 2021)</p>
+                      <p>Minors: Computer Science & Mathematics</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-foreground">Loudoun Valley High School</p>
+                      <p>2012 - 2016</p>
+                    </div>
                   </div>
                 </div>
               </div>
