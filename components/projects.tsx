@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, Zap, MinusCircle } from "lucide-react"
+import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle } from "lucide-react"
 import Image from "next/image"
 
 export function Projects() {
@@ -97,26 +97,37 @@ export function Projects() {
             </CardContent>
           </Card>
 
-          <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow relative">
             <CardHeader>
-              <div className="space-y-2">
+              <div className="space-y-2 pr-[220px]">
                 <CardTitle className="text-2xl">paul-ai</CardTitle>
                 <CardDescription className="text-base">
                   GroupMe bot for pickup basketball group chat that tracks player attendance and plus-ones
                 </CardDescription>
               </div>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="prose prose-sm text-muted-foreground max-w-none mb-2">
-                <p>
-                  A GroupMe bot that helps manage weekly pickup basketball games by counting who's in and tracking
-                  plus-ones. The bot receives webhook calls from GroupMe, analyzes the last week's messages using an
-                  LLM, and outputs a formatted roster showing confirmed players, guests, and withdrawals.
-                </p>
+            <div className="absolute top-[3.5rem] right-6 w-[200px] hidden md:block">
+              <div className="relative rounded-lg overflow-hidden">
+                <Image
+                  src="/images/paul-ai.jpeg"
+                  alt="paul-ai roster example"
+                  width={200}
+                  height={600}
+                  className="w-full h-auto object-contain rounded-lg"
+                />
               </div>
+            </div>
+            <CardContent className="space-y-4">
+              <div className="md:pr-[220px]">
+                <div className="prose prose-sm text-muted-foreground max-w-none">
+                  <p>
+                    A GroupMe bot that helps manage weekly pickup basketball games by counting who's in and tracking
+                    plus-ones. The bot receives webhook calls from GroupMe, analyzes the last week's messages using an
+                    LLM, and outputs a formatted roster showing confirmed players, guests, and withdrawals.
+                  </p>
+                </div>
 
-              <div className="relative flex flex-col md:flex-row gap-3 md:items-start">
-                <div className="space-y-3">
+                <div className="space-y-3 mt-4">
                   <div className="flex items-center gap-2 text-sm">
                     <Bot className="h-4 w-4 text-muted-foreground" />
                     <span className="text-muted-foreground">Automated attendance tracking via GroupMe bot</span>
@@ -133,32 +144,25 @@ export function Projects() {
                     <CheckCircle className="h-4 w-4 text-muted-foreground" />
                     <span className="text-muted-foreground">Formatted roster output with status</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Zap className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground">Real-time webhook integration with Vercel</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <MinusCircle className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground">Tracks withdrawals and status changes</span>
-                  </div>
                 </div>
 
-                <div className="relative w-full md:w-auto md:max-w-[175px] flex-shrink-0 rounded-lg overflow-hidden border bg-muted/50 md:ml-10">
-                  <Image
-                    src="/images/paul-ai.jpeg"
-                    alt="paul-ai roster example"
-                    width={200}
-                    height={400}
-                    className="w-full h-auto"
-                  />
-                </div>
-
-                <div className="flex flex-wrap gap-2 mt-4 md:absolute md:bottom-0 md:left-0 md:mt-0">
+                <div className="flex flex-wrap gap-2 pt-2">
                   <Badge variant="secondary">Bot</Badge>
                   <Badge variant="secondary">GroupMe</Badge>
                   <Badge variant="secondary">LLM</Badge>
                   <Badge variant="secondary">Webhook</Badge>
                   <Badge variant="secondary">Vercel</Badge>
+                </div>
+              </div>
+              <div className="block md:hidden mt-4">
+                <div className="relative w-full rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/paul-ai.jpeg"
+                    alt="paul-ai roster example"
+                    width={200}
+                    height={600}
+                    className="w-full h-auto object-contain rounded-lg"
+                  />
                 </div>
               </div>
             </CardContent>
