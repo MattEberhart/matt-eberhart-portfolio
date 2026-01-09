@@ -33,5 +33,21 @@ export const projects: Project[] = [
     github: "https://apps.apple.com/us/app/bndr/id6749908487",
     status: "active",
   },
+  {
+    id: "paul-ai",
+    title: "paul-ai",
+    description: "GroupMe bot for pickup basketball group chat that tracks player attendance and plus-ones",
+    longDescription:
+      "A GroupMe bot that helps manage weekly pickup basketball games by counting who's in and tracking plus-ones. The bot receives webhook calls from GroupMe, analyzes the last week's messages using an LLM, and outputs a formatted roster showing confirmed players, guests, and withdrawals. This helps the group know if there are enough players and who needs to pay the organizer.",
+    tags: ["Bot", "GroupMe", "LLM", "Webhook", "Vercel"],
+    features: [
+      { icon: "bot", text: "Automated attendance tracking via GroupMe bot" },
+      { icon: "message-square", text: "LLM-powered message analysis" },
+      { icon: "users", text: "Tracks players and plus-ones" },
+      { icon: "check-circle", text: "Formatted roster output with status" },
+    ],
+    status: "completed",
+    image: "/images/paul-ai.png",
+  },
   // Add more projects here as you build them
 ]
