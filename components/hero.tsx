@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 export function Hero() {
@@ -7,7 +8,14 @@ export function Hero() {
       <div className="container mx-auto max-w-5xl">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-8 mb-8">
           <div className="relative w-32 h-32 rounded-full overflow-hidden bg-muted flex-shrink-0">
-            <img src="/images/img-7966.jpeg" alt="Matt Eberhart" className="w-full h-full object-cover" />
+            <Image
+              src="/images/img-7966.jpeg"
+              alt="Matt Eberhart - Software Engineer"
+              width={128}
+              height={128}
+              className="w-full h-full object-cover"
+              priority
+            />
           </div>
           <div className="space-y-6 flex-1">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-balance">Matt Eberhart</h1>

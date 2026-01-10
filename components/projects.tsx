@@ -24,7 +24,7 @@ export function Projects() {
                   </CardDescription>
                 </div>
                 <div className="rounded-lg bg-[#6c4fb3] p-3">
-                  <Image src="/images/bndrlogo.png" alt="BNDR Logo" width={32} height={32} className="h-8 w-8" />
+                  <Image src="/images/bndrlogo.png" alt="BNDR app logo - Social app for tracking drinks and party stats" width={32} height={32} className="h-8 w-8" />
                 </div>
               </div>
             </CardHeader>
@@ -108,13 +108,13 @@ export function Projects() {
             </CardHeader>
             <div className="absolute top-[3.5rem] right-6 w-[200px] hidden md:block">
               <div className="relative rounded-lg overflow-hidden">
-                <Image
-                  src="/images/paul-ai.jpeg"
-                  alt="paul-ai roster example"
-                  width={200}
-                  height={600}
-                  className="w-full h-auto object-contain rounded-lg"
-                />
+                  <Image
+                    src="/images/paul-ai.jpeg"
+                    alt="paul-ai GroupMe bot roster example showing player attendance tracking for pickup basketball games"
+                    width={200}
+                    height={600}
+                    className="w-full h-auto object-contain rounded-lg"
+                  />
               </div>
             </div>
             <CardContent className="space-y-4">
@@ -158,7 +158,7 @@ export function Projects() {
                 <div className="relative w-full rounded-lg overflow-hidden">
                   <Image
                     src="/images/paul-ai.jpeg"
-                    alt="paul-ai roster example"
+                    alt="paul-ai GroupMe bot roster example showing player attendance tracking for pickup basketball games"
                     width={200}
                     height={600}
                     className="w-full h-auto object-contain rounded-lg"
