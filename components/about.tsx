@@ -21,7 +21,7 @@ export function About() {
                       <span className="font-medium text-foreground">2025 - Present:</span> Oracle Health / Pharmacies AI
                     </p>
                     <p>
-                      <span className="font-medium text-foreground">2024 - Present:</span> BNDR LLC / Founder
+                      <span className="font-medium text-foreground">2025 - Present:</span> BNDR LLC / Founder
                     </p>
                     <p>
                       <span className="font-medium text-foreground">2024 - 2025:</span> Microsoft / Copilot Studio

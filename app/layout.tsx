@@ -7,24 +7,28 @@ import "./globals.css"
 const _inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
-// Get base URL from environment variable or use placeholder
-// Update this to your actual domain when deployed (e.g., https://matteberhart.com)
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL 
-  ? `https://${process.env.VERCEL_URL}` 
-  : "https://matteberhart.com"
+const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://matteberhart.com")
 const siteUrl = baseUrl.replace(/\/$/, "")
 
 export const metadata: Metadata = {
   title: {
-    default: "Matt Eberhart | Software Engineer",
+    default: "Matt Eberhart | Software Engineer & Freelance Web Developer – Charlotte, NC",
     template: "%s | Matt Eberhart",
   },
   description:
-    "Matt Eberhart - Software Engineer at Oracle Health specializing in AI agents, cloud infrastructure, and full-stack development. Former Microsoft engineer with experience in Azure Cost Management, Copilot Studio, and building innovative web applications. Based in Charlotte, NC.",
+    "Matt Eberhart – Software Engineer at Oracle Health and freelance web developer in Charlotte, NC. I build custom websites, web apps, and AI-powered tools for small businesses. Former Microsoft engineer (Azure, Copilot Studio).",
   generator: "Next.js",
   keywords: [
     "Matt Eberhart",
     "Software Engineer",
+    "Freelance Web Developer Charlotte NC",
+    "Freelance Software Engineer Charlotte",
+    "Custom Website Development Small Business",
+    "Hire Software Engineer Charlotte",
+    "AI Tools for Small Business",
+    "Custom Web App Development",
     "Microsoft",
     "Oracle",
     "Azure",
@@ -34,8 +38,7 @@ export const metadata: Metadata = {
     "Cloud Infrastructure",
     "AI Agents",
     "Copilot Studio",
-    "Azure Cost Management",
-    "Pharmacies AI",
+    "Next.js Developer Charlotte",
     "Virginia Tech",
   ],
   authors: [{ name: "Matt Eberhart", url: siteUrl }],
@@ -50,9 +53,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "Matt Eberhart - Software Engineer",
-    title: "Matt Eberhart | Software Engineer",
+    title: "Matt Eberhart | Software Engineer & Freelance Web Developer – Charlotte, NC",
     description:
-      "Matt Eberhart - Software Engineer at Oracle Health specializing in AI agents, cloud infrastructure, and full-stack development. Former Microsoft engineer with experience in Azure Cost Management, Copilot Studio, and building innovative web applications. Based in Charlotte, NC.",
+      "Matt Eberhart – Software Engineer at Oracle Health and freelance web developer in Charlotte, NC. I build custom websites, web apps, and AI-powered tools for small businesses. Former Microsoft engineer (Azure, Copilot Studio).",
     images: [
       {
         url: `${siteUrl}/images/img-7966.jpeg`,
@@ -65,9 +68,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Matt Eberhart | Software Engineer",
+    title: "Matt Eberhart | Software Engineer & Freelance Web Developer – Charlotte, NC",
     description:
-      "Software Engineer at Oracle Health | AI Agents, Cloud Infrastructure, Full-Stack Development | Former Microsoft Engineer | Based in Charlotte, NC",
+      "Software Engineer at Oracle Health & freelance web developer in Charlotte, NC. Custom websites, web apps, and AI tools for small businesses. Former Microsoft Engineer.",
     images: [`${siteUrl}/images/img-7966.jpeg`],
     creator: "@MattEberhart10",
   },
@@ -173,6 +176,43 @@ const websiteSchema = {
   },
 }
 
+// ProfessionalService schema for freelance work
+const freelanceServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Matt Eberhart – Freelance Web Developer",
+  description:
+    "Custom websites, web applications, and AI-powered tools for small businesses. Based in Charlotte, NC.",
+  url: siteUrl,
+  telephone: "",
+  areaServed: {
+    "@type": "City",
+    name: "Charlotte",
+    "@id": "https://www.wikidata.org/wiki/Q49111",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Charlotte",
+    addressRegion: "NC",
+    addressCountry: "US",
+  },
+  provider: {
+    "@type": "Person",
+    name: "Matt Eberhart",
+    url: siteUrl,
+  },
+  serviceType: ["Custom Website Development", "Web Application Development", "AI Tool Development"],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Web Development Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom Websites & Landing Pages" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web Applications" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI-Powered Tools" } },
+    ],
+  },
+}
+
 // Organization schema for BNDR LLC
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -224,6 +264,12 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+
+        {/* Structured Data - ProfessionalService Schema (freelance work) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(freelanceServiceSchema) }}
         />
       </head>
       <body className={`font-sans antialiased`}>

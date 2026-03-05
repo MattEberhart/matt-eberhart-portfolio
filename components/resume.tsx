@@ -42,7 +42,7 @@ export function Experience() {
                 <h4 className="font-semibold">Founder and Solo Developer</h4>
                 <p className="text-muted-foreground">BNDR LLC</p>
               </div>
-              <span className="text-sm text-muted-foreground whitespace-nowrap">June 2024 - Present</span>
+              <span className="text-sm text-muted-foreground whitespace-nowrap">2025 - Present</span>
             </div>
             <ul className="text-sm text-muted-foreground leading-relaxed space-y-1 list-disc list-inside">
               <li>Built MVP as a PWA using Vercel V0 and Supabase</li>
@@ -106,7 +106,7 @@ export function Experience() {
           <div className="border-l-2 border-muted pl-4">
             <div className="flex items-start justify-between gap-4 mb-2">
               <div>
-                <h4 className="font-semibold">Internships</h4>
+                <h4 className="font-semibold">Software Engineering Intern</h4>
                 <p className="text-muted-foreground">Microsoft</p>
               </div>
               <span className="text-sm text-muted-foreground whitespace-nowrap">2018 - 2020</span>
@@ -152,6 +152,7 @@ export function Experience() {
             <h3 className="text-xl font-semibold mb-4">Skills</h3>
             <div className="flex flex-wrap gap-2">
               {[
+                "Claude Code",
                 "Vercel",
                 "Next.js",
                 "React Native",

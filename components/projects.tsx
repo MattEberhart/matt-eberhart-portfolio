@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle } from "lucide-react"
+import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, Globe, DollarSign, Cpu } from "lucide-react"
 import Image from "next/image"
 
 export function Projects() {
@@ -93,6 +93,63 @@ export function Projects() {
                 <Badge variant="secondary">iOS</Badge>
                 <Badge variant="secondary">Social</Badge>
                 <Badge variant="secondary">Photo Sharing</Badge>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <div className="flex items-start justify-between gap-4">
+                <div className="space-y-2 flex-1">
+                  <CardTitle className="text-2xl">lyd-portfolio</CardTitle>
+                  <CardDescription className="text-base">
+                    Cloned and rebuilt my fiancée{"'"}s business website to eliminate a $30/month subscription cost
+                  </CardDescription>
+                </div>
+                <div className="rounded-lg bg-primary/10 p-3">
+                  <Globe className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="prose prose-sm text-muted-foreground max-w-none">
+                <p>
+                  Used Claude Code to clone and rebuild the website my fiancée Lydia was paying $30/month for —
+                  saving her the recurring cost entirely. The original site (solydstrategies.com) is a social media
+                  management and graphic design business based in Charlotte, NC. Rebuilt with Next.js and deployed on
+                  Vercel.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-sm">
+                  <DollarSign className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Eliminated $30/month website builder subscription</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Cpu className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Built with Claude Code — AI-assisted development</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Globe className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Deployed on Vercel with zero hosting cost</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Button variant="default" asChild>
+                  <a href="https://solyd-strategies.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    View Site
+                  </a>
+                </Button>
+              </div>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                <Badge variant="secondary">Next.js</Badge>
+                <Badge variant="secondary">React</Badge>
+                <Badge variant="secondary">Vercel</Badge>
+                <Badge variant="secondary">Claude Code</Badge>
               </div>
             </CardContent>
           </Card>

@@ -4,6 +4,7 @@ import { About } from "@/components/about"
 import { Projects } from "@/components/projects"
 import { Experience } from "@/components/resume"
 import { Photos } from "@/components/photos"
+import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL 
@@ -41,6 +42,25 @@ const projectsSchema = [
       "Social features for friend groups",
       "Photo sharing and galleries",
       "Track and visualize party statistics",
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "lyd-portfolio",
+    applicationCategory: "WebApplication",
+    operatingSystem: "Web",
+    description: "Rebuilt a small business website with Next.js and Vercel to eliminate a $30/month subscription cost. Built using Claude Code for AI-assisted development.",
+    url: "https://solyd-strategies.vercel.app/",
+    author: {
+      "@type": "Person",
+      name: "Matt Eberhart",
+      url: siteUrl,
+    },
+    featureList: [
+      "Custom Next.js build replacing website builder subscription",
+      "Deployed on Vercel at zero hosting cost",
+      "AI-assisted development with Claude Code",
     ],
   },
   {
@@ -86,6 +106,7 @@ export default function Home() {
         <Projects />
         <Experience />
         <Photos />
+        <Contact />
         <Footer />
       </main>
     </>
