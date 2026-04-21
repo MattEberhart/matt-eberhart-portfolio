@@ -35,21 +35,21 @@ export function Hero() {
                 </a>
               </Button>
 
-              <Button variant="outline" size="lg" asChild>
+              <Button variant="default" size="lg" asChild>
                 <a href="https://www.linkedin.com/in/carleberhart/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="mr-2 h-4 w-4" />
                   LinkedIn
                 </a>
               </Button>
 
-              <Button variant="outline" size="lg" asChild>
+              <Button variant="default" size="lg" asChild>
                 <a href="https://x.com/MattEberhart10" target="_blank" rel="noopener noreferrer">
                   <Twitter className="mr-2 h-4 w-4" />
                   Twitter
                 </a>
               </Button>
 
-              <Button variant="outline" size="lg" asChild>
+              <Button variant="default" size="lg" asChild>
                 <a href="https://www.instagram.com/matteberhart10/" target="_blank" rel="noopener noreferrer">
                   <Instagram className="mr-2 h-4 w-4" />
                   Instagram

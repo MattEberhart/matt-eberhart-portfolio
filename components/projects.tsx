@@ -1,7 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, Globe, DollarSign, Cpu } from "lucide-react"
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
+import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, Globe, DollarSign, Cpu, FileText, Sparkles, Calendar, Filter, Shield, Mail, FileCheck2, Github } from "lucide-react"
 import Image from "next/image"
 
 export function Projects() {
@@ -58,13 +59,13 @@ export function Projects() {
                     Visit Website
                   </a>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="default" asChild>
                   <a href="https://apps.apple.com/us/app/bndr/id6749908487" target="_blank" rel="noopener noreferrer">
                     <Smartphone className="mr-2 h-4 w-4" />
                     Download on App Store
                   </a>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="default" asChild>
                   <a
                     href="https://www.instagram.com/joinbndr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     target="_blank"
@@ -74,7 +75,7 @@ export function Projects() {
                     Instagram
                   </a>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="default" asChild>
                   <a
                     href="https://www.tiktok.com/@bndrapp?_r=1&_t=ZP-92H6QFRepDS"
                     target="_blank"
@@ -93,6 +94,319 @@ export function Projects() {
                 <Badge variant="secondary">iOS</Badge>
                 <Badge variant="secondary">Social</Badge>
                 <Badge variant="secondary">Photo Sharing</Badge>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow relative">
+            <CardHeader>
+              <div className="space-y-2 pr-[220px]">
+                <CardTitle className="text-2xl">cape-epoxy</CardTitle>
+                <CardDescription className="text-base">
+                  Bespoke CRM and bid-management platform for a real epoxy sub-contractor
+                </CardDescription>
+              </div>
+            </CardHeader>
+            <div className="absolute top-[3.5rem] right-6 w-[200px] hidden md:block">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button type="button" className="block w-full cursor-zoom-in rounded-lg overflow-hidden hover:opacity-90 transition">
+                    <Image
+                      src="/images/cape-epoxy.png"
+                      alt="cape-epoxy CRM and bid-management dashboard screenshot"
+                      width={200}
+                      height={600}
+                      className="w-full h-auto object-contain rounded-lg"
+                    />
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-[95vw] sm:max-w-6xl p-2">
+                  <Image
+                    src="/images/cape-epoxy.png"
+                    alt="cape-epoxy CRM and bid-management dashboard screenshot"
+                    width={1920}
+                    height={1440}
+                    className="w-full h-auto max-h-[85vh] object-contain rounded-lg mx-auto"
+                  />
+                </DialogContent>
+              </Dialog>
+            </div>
+            <CardContent className="space-y-4">
+              <div className="md:pr-[220px] space-y-4">
+                <div className="prose prose-sm text-muted-foreground max-w-none">
+                  <p>
+                    A custom-built CRM that replaces a fragmented stack (BuildingConnected, Stack CT, Housecall Pro,
+                    Asana, Google Sheets) with a single unified system. Automates a three-stage pipeline: ITB intake
+                    via Gmail label watch, multi-revision bid creation with PDF delivery, and job tracking. My friend
+                    Louis and I are building a business around bespoke contractor software, with Cape Epoxy as our
+                    first client.
+                  </p>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 text-sm">
+                    <Mail className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-muted-foreground">Automatic ITB ingestion via Gmail label watch + Pub/Sub</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <FileCheck2 className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-muted-foreground">Multi-revision bid workflow (Draft → Review → Approve → PDF)</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <Shield className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-muted-foreground">Role-based review with RLS-backed auth</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <TrendingUp className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-muted-foreground">Three-stage pipeline: ITBs → Bids → Jobs</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">Next.js</Badge>
+                  <Badge variant="secondary">Supabase</Badge>
+                  <Badge variant="secondary">Gmail API</Badge>
+                  <Badge variant="secondary">Cloudflare R2</Badge>
+                  <Badge variant="secondary">Resend</Badge>
+                  <Badge variant="secondary">TanStack Query</Badge>
+                </div>
+              </div>
+              <div className="block md:hidden mt-4">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button type="button" className="block w-full cursor-zoom-in rounded-lg overflow-hidden hover:opacity-90 transition">
+                      <Image
+                        src="/images/cape-epoxy.png"
+                        alt="cape-epoxy CRM and bid-management dashboard screenshot"
+                        width={200}
+                        height={600}
+                        className="w-full h-auto object-contain rounded-lg"
+                      />
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl p-2">
+                    <Image
+                      src="/images/cape-epoxy.png"
+                      alt="cape-epoxy CRM and bid-management dashboard screenshot"
+                      width={1600}
+                      height={1200}
+                      className="w-full h-auto max-h-[85vh] object-contain rounded-lg mx-auto"
+                    />
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow relative">
+            <CardHeader>
+              <div className="space-y-2 pr-[220px]">
+                <CardTitle className="text-2xl">paul-ai</CardTitle>
+                <CardDescription className="text-base">
+                  GroupMe bot for pickup basketball group chat that tracks player attendance and plus-ones
+                </CardDescription>
+              </div>
+            </CardHeader>
+            <div className="absolute top-[3.5rem] right-6 w-[200px] hidden md:block">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button type="button" className="block w-full cursor-zoom-in rounded-lg overflow-hidden hover:opacity-90 transition">
+                    <Image
+                      src="/images/paul-ai.jpeg"
+                      alt="paul-ai GroupMe bot roster example showing player attendance tracking for pickup basketball games"
+                      width={200}
+                      height={600}
+                      className="w-full h-auto object-contain rounded-lg"
+                    />
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl p-2">
+                  <Image
+                    src="/images/paul-ai.jpeg"
+                    alt="paul-ai GroupMe bot roster example showing player attendance tracking for pickup basketball games"
+                    width={1200}
+                    height={1800}
+                    className="w-full h-auto max-h-[85vh] object-contain rounded-lg mx-auto"
+                  />
+                </DialogContent>
+              </Dialog>
+            </div>
+            <CardContent className="space-y-4">
+              <div className="md:pr-[220px] space-y-4">
+                <div className="prose prose-sm text-muted-foreground max-w-none">
+                  <p>
+                    A GroupMe bot that helps manage weekly pickup basketball games by counting who's in and tracking
+                    plus-ones. The bot receives webhook calls from GroupMe, analyzes the last week's messages using an
+                    LLM, and outputs a formatted roster showing confirmed players, guests, and withdrawals.
+                  </p>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 text-sm">
+                    <Bot className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-muted-foreground">Automated attendance tracking via GroupMe bot</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <MessageSquare className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-muted-foreground">LLM-powered message analysis</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <Users className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-muted-foreground">Tracks players and plus-ones</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <CheckCircle className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-muted-foreground">Formatted roster output with status</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-3">
+                  <Button variant="default" asChild>
+                    <a href="https://github.com/MattEberhart/paul-ai" target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2 h-4 w-4" />
+                      View on GitHub
+                    </a>
+                  </Button>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">Bot</Badge>
+                  <Badge variant="secondary">GroupMe</Badge>
+                  <Badge variant="secondary">LLM</Badge>
+                  <Badge variant="secondary">Webhook</Badge>
+                  <Badge variant="secondary">Vercel</Badge>
+                </div>
+              </div>
+              <div className="block md:hidden mt-4">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button type="button" className="block w-full cursor-zoom-in rounded-lg overflow-hidden hover:opacity-90 transition">
+                      <Image
+                        src="/images/paul-ai.jpeg"
+                        alt="paul-ai GroupMe bot roster example showing player attendance tracking for pickup basketball games"
+                        width={200}
+                        height={600}
+                        className="w-full h-auto object-contain rounded-lg"
+                      />
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl p-2">
+                    <Image
+                      src="/images/paul-ai.jpeg"
+                      alt="paul-ai GroupMe bot roster example showing player attendance tracking for pickup basketball games"
+                      width={1200}
+                      height={1800}
+                      className="w-full h-auto max-h-[85vh] object-contain rounded-lg mx-auto"
+                    />
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow relative">
+            <CardHeader>
+              <div className="space-y-2 pr-[220px]">
+                <CardTitle className="text-2xl">aspen-takehome</CardTitle>
+                <CardDescription className="text-base">
+                  Take-home interview project for Aspen — AI-powered PDF generator for financial advisors
+                </CardDescription>
+              </div>
+            </CardHeader>
+            <div className="absolute top-[3.5rem] right-6 w-[200px] hidden md:block">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button type="button" className="block w-full cursor-zoom-in rounded-lg overflow-hidden hover:opacity-90 transition">
+                    <Image
+                      src="/images/aspen-takehome.png"
+                      alt="aspen-takehome sample PDF output for financial advisor client deliverable"
+                      width={200}
+                      height={600}
+                      className="w-full h-auto object-contain rounded-lg"
+                    />
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-[95vw] sm:max-w-6xl p-2">
+                  <Image
+                    src="/images/aspen-takehome.png"
+                    alt="aspen-takehome sample PDF output for financial advisor client deliverable"
+                    width={1920}
+                    height={1440}
+                    className="w-full h-auto max-h-[85vh] object-contain rounded-lg mx-auto"
+                  />
+                </DialogContent>
+              </Dialog>
+            </div>
+            <CardContent className="space-y-4">
+              <div className="md:pr-[220px] space-y-4">
+                <div className="prose prose-sm text-muted-foreground max-w-none">
+                  <p>
+                    Natural-language prompts like &quot;create a retirement plan review for Susie&quot; produce branded,
+                    multi-page PDF client deliverables. Uses multi-phase agentic orchestration with the Claude API to
+                    drive a research → content → render pipeline, with Puppeteer rendering live React components
+                    straight to PDF.
+                  </p>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 text-sm">
+                    <Sparkles className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-muted-foreground">Multi-phase agentic orchestration with Claude API</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <FileText className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-muted-foreground">Puppeteer renders live React components to branded PDFs</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <Users className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-muted-foreground">Content personalized to client profile (age, goals, assets)</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <Cpu className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-muted-foreground">Server-side streaming (SSE) for real-time generation progress</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-3">
+                  <Button variant="default" asChild>
+                    <a href="https://github.com/MattEberhart/aspen-takehome" target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2 h-4 w-4" />
+                      View on GitHub
+                    </a>
+                  </Button>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">Next.js</Badge>
+                  <Badge variant="secondary">TypeScript</Badge>
+                  <Badge variant="secondary">Claude API</Badge>
+                  <Badge variant="secondary">Puppeteer</Badge>
+                  <Badge variant="secondary">Take-Home</Badge>
+                </div>
+              </div>
+              <div className="block md:hidden mt-4">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button type="button" className="block w-full cursor-zoom-in rounded-lg overflow-hidden hover:opacity-90 transition">
+                      <Image
+                        src="/images/aspen-takehome.png"
+                        alt="aspen-takehome sample PDF output for financial advisor client deliverable"
+                        width={200}
+                        height={600}
+                        className="w-full h-auto object-contain rounded-lg"
+                      />
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl p-2">
+                    <Image
+                      src="/images/aspen-takehome.png"
+                      alt="aspen-takehome sample PDF output for financial advisor client deliverable"
+                      width={1600}
+                      height={1200}
+                      className="w-full h-auto max-h-[85vh] object-contain rounded-lg mx-auto"
+                    />
+                  </DialogContent>
+                </Dialog>
               </div>
             </CardContent>
           </Card>
@@ -154,73 +468,62 @@ export function Projects() {
             </CardContent>
           </Card>
 
-          <Card className="overflow-hidden hover:shadow-lg transition-shadow relative">
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow">
             <CardHeader>
-              <div className="space-y-2 pr-[220px]">
-                <CardTitle className="text-2xl">paul-ai</CardTitle>
-                <CardDescription className="text-base">
-                  GroupMe bot for pickup basketball group chat that tracks player attendance and plus-ones
-                </CardDescription>
+              <div className="flex items-start justify-between gap-4">
+                <div className="space-y-2 flex-1">
+                  <CardTitle className="text-2xl">ebvents</CardTitle>
+                  <CardDescription className="text-base">
+                    Take-home interview project for Fastbreak AI — sporting event management dashboard
+                  </CardDescription>
+                </div>
+                <div className="rounded-lg bg-primary/10 p-3">
+                  <Calendar className="h-8 w-8 text-primary" />
+                </div>
               </div>
             </CardHeader>
-            <div className="absolute top-[3.5rem] right-6 w-[200px] hidden md:block">
-              <div className="relative rounded-lg overflow-hidden">
-                  <Image
-                    src="/images/paul-ai.jpeg"
-                    alt="paul-ai GroupMe bot roster example showing player attendance tracking for pickup basketball games"
-                    width={200}
-                    height={600}
-                    className="w-full h-auto object-contain rounded-lg"
-                  />
-              </div>
-            </div>
             <CardContent className="space-y-4">
-              <div className="md:pr-[220px]">
-                <div className="prose prose-sm text-muted-foreground max-w-none">
-                  <p>
-                    A GroupMe bot that helps manage weekly pickup basketball games by counting who's in and tracking
-                    plus-ones. The bot receives webhook calls from GroupMe, analyzes the last week's messages using an
-                    LLM, and outputs a formatted roster showing confirmed players, guests, and withdrawals.
-                  </p>
-                </div>
+              <div className="prose prose-sm text-muted-foreground max-w-none">
+                <p>
+                  A full-stack event management platform with multi-venue scheduling, dual card/table dashboard views,
+                  and multi-auth support. Built with Next.js 16, Supabase (with RLS), Cloudflare Images, and shadcn/ui.
+                </p>
+              </div>
 
-                <div className="space-y-3 mt-4">
-                  <div className="flex items-center gap-2 text-sm">
-                    <Bot className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground">Automated attendance tracking via GroupMe bot</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <MessageSquare className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground">LLM-powered message analysis</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Users className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground">Tracks players and plus-ones</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground">Formatted roster output with status</span>
-                  </div>
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-sm">
+                  <Calendar className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Multi-venue event scheduling with card & table dashboard views</span>
                 </div>
-
-                <div className="flex flex-wrap gap-2 pt-2">
-                  <Badge variant="secondary">Bot</Badge>
-                  <Badge variant="secondary">GroupMe</Badge>
-                  <Badge variant="secondary">LLM</Badge>
-                  <Badge variant="secondary">Webhook</Badge>
-                  <Badge variant="secondary">Vercel</Badge>
+                <div className="flex items-center gap-2 text-sm">
+                  <Filter className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Advanced filtering, search, and sorting</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Shield className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Multi-auth: email/password, OTP, Google OAuth (Supabase + RLS)</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Camera className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Image uploads via Cloudflare CDN</span>
                 </div>
               </div>
-              <div className="block md:hidden mt-4">
-                <div className="relative w-full rounded-lg overflow-hidden">
-                  <Image
-                    src="/images/paul-ai.jpeg"
-                    alt="paul-ai GroupMe bot roster example showing player attendance tracking for pickup basketball games"
-                    width={200}
-                    height={600}
-                    className="w-full h-auto object-contain rounded-lg"
-                  />
-                </div>
+
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Button variant="default" asChild>
+                  <a href="https://github.com/MattEberhart/ebvents" target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" />
+                    View on GitHub
+                  </a>
+                </Button>
+              </div>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                <Badge variant="secondary">Next.js</Badge>
+                <Badge variant="secondary">Supabase</Badge>
+                <Badge variant="secondary">Cloudflare Images</Badge>
+                <Badge variant="secondary">shadcn/ui</Badge>
+                <Badge variant="secondary">Take-Home</Badge>
               </div>
             </CardContent>
           </Card>
