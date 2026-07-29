@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
-import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, Globe, DollarSign, Cpu, FileText, Sparkles, Calendar, Filter, Shield, Mail, FileCheck2, Github } from "lucide-react"
+import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, Globe, DollarSign, Cpu, FileText, Sparkles, Calendar, Filter, Shield, Mail, FileCheck2, Github, MapPin } from "lucide-react"
 import Image from "next/image"
 
 export function Projects() {
@@ -524,6 +524,66 @@ export function Projects() {
                 <Badge variant="secondary">Cloudflare Images</Badge>
                 <Badge variant="secondary">shadcn/ui</Badge>
                 <Badge variant="secondary">Take-Home</Badge>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <div className="flex items-start justify-between gap-4">
+                <div className="space-y-2 flex-1">
+                  <CardTitle className="text-2xl">pjc-detailing</CardTitle>
+                  <CardDescription className="text-base">
+                    Marketing and booking site for a mobile car detailing business in Charlotte, NC
+                  </CardDescription>
+                </div>
+                <div className="rounded-lg bg-primary/10 p-3">
+                  <Sparkles className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="prose prose-sm text-muted-foreground max-w-none">
+                <p>
+                  A site for PJC Detailing, a premium mobile detailing service serving the Charlotte area. Showcases
+                  service packages with starting prices and customer reviews, and lets customers request an
+                  appointment online with their package pre-selected. Built with Next.js and deployed on Vercel.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-sm">
+                  <Calendar className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Online booking flow with package pre-selection</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <DollarSign className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Service packages with transparent starting prices</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <MapPin className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Local SEO for Charlotte-area mobile detailing searches</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Smartphone className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Mobile-first responsive design</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Button variant="default" asChild>
+                  <a href="https://pjcdetailing.com" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Visit Website
+                  </a>
+                </Button>
+              </div>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                <Badge variant="secondary">Next.js</Badge>
+                <Badge variant="secondary">React</Badge>
+                <Badge variant="secondary">Vercel</Badge>
+                <Badge variant="secondary">Small Business</Badge>
               </div>
             </CardContent>
           </Card>

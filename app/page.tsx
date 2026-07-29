@@ -160,6 +160,27 @@ const projectsSchema = [
       "Image uploads via Cloudflare CDN",
     ],
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "pjc-detailing",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    description: "Marketing and booking site for PJC Detailing, a premium mobile car detailing business serving Charlotte, North Carolina. Showcases service packages with starting prices and customer reviews, and lets customers request an appointment online with their package pre-selected.",
+    url: "https://pjcdetailing.com",
+    sameAs: ["https://pjcdetailing.com"],
+    author: {
+      "@type": "Person",
+      name: "Matt Eberhart",
+      url: siteUrl,
+    },
+    featureList: [
+      "Online booking flow with package pre-selection",
+      "Service packages with transparent starting prices",
+      "Local SEO for Charlotte-area mobile detailing searches",
+      "Mobile-first responsive design",
+    ],
+  },
 ]
 
 export default function Home() {
