@@ -134,17 +134,26 @@ export function Experience() {
         <div className="mt-12 space-y-8">
           <div>
             <h3 className="text-xl font-semibold mb-4">Education</h3>
-            <div className="border-l-2 border-accent pl-4">
-              <div className="flex items-start justify-between gap-4 mb-2">
-                <div>
-                  <h4 className="font-semibold">Virginia Polytechnic Institute and State University</h4>
-                  <p className="text-muted-foreground">Bachelor of Arts in Spanish</p>
+            <div className="space-y-4">
+              <div className="border-l-2 border-accent pl-4">
+                <div className="flex items-start justify-between gap-4 mb-2">
+                  <div>
+                    <h4 className="font-semibold">Virginia Polytechnic Institute and State University</h4>
+                    <p className="text-muted-foreground">Bachelor of Arts in Spanish</p>
+                  </div>
+                  <span className="text-sm text-muted-foreground whitespace-nowrap">2016 - 2021</span>
                 </div>
-                <span className="text-sm text-muted-foreground whitespace-nowrap">2016 - 2021</span>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Minors in Computer Science and Mathematics
+                </p>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Minors in Computer Science and Mathematics
-              </p>
+
+              <div className="border-l-2 border-accent pl-4">
+                <div className="flex items-start justify-between gap-4">
+                  <h4 className="font-semibold">Loudoun Valley High School</h4>
+                  <span className="text-sm text-muted-foreground whitespace-nowrap">2012 - 2016</span>
+                </div>
+              </div>
             </div>
           </div>
 
