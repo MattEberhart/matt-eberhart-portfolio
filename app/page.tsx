@@ -77,6 +77,32 @@ const projectsSchema = [
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    name: "clt-golf-league",
+    applicationCategory: "SportsApplication",
+    operatingSystem: "Web",
+    description: "Queen City Match Play — a standings, schedule, and result tracking site for my six-team, twelve-player net match play golf league in Charlotte, North Carolina. Tracks the round-robin schedule, live standings with league tiebreakers, team pages with adjusted handicaps, and a password-gated form league members use to submit results. Built with Next.js Server Components and Server Actions over Drizzle ORM and Turso, deployed on Vercel.",
+    url: "https://clt-golf-league.vercel.app/",
+    codeRepository: "https://github.com/MattEberhart/clt-golf-league",
+    sameAs: [
+      "https://clt-golf-league.vercel.app/",
+      "https://github.com/MattEberhart/clt-golf-league",
+    ],
+    author: {
+      "@type": "Person",
+      name: "Matt Eberhart",
+      url: siteUrl,
+    },
+    featureList: [
+      "Live standings with head-to-head and margin-of-victory tiebreakers",
+      "Round-robin schedule across five rounds plus a championship",
+      "Team pages with adjusted handicaps used for net scoring",
+      "Password-gated result submission with HMAC-signed session cookies",
+      "Drizzle ORM over Turso (libSQL) with Server Action mutations",
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
     name: "pjc-detailing",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
