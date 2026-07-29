@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
-import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, Globe, DollarSign, Cpu, FileText, Sparkles, Calendar, Filter, Shield, Mail, FileCheck2, Github, MapPin } from "lucide-react"
+import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, Globe, DollarSign, Cpu, FileText, Sparkles, Calendar, Filter, Shield, Mail, FileCheck2, Github, MapPin, Trophy, Database } from "lucide-react"
 import Image from "next/image"
 
 export function Projects() {
@@ -200,6 +200,80 @@ export function Projects() {
                     />
                   </DialogContent>
                 </Dialog>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <div className="flex items-start justify-between gap-4">
+                <div className="space-y-2 flex-1">
+                  <CardTitle className="text-2xl">clt-golf-league</CardTitle>
+                  <CardDescription className="text-base">
+                    Standings, schedule, and result tracking for a Charlotte net match play golf league
+                  </CardDescription>
+                </div>
+                <div className="rounded-lg bg-primary/10 p-3">
+                  <Trophy className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="prose prose-sm text-muted-foreground max-w-none">
+                <p>
+                  Queen City Match Play is a site I built for a friend{"'"}s six-team, twelve-player golf league — net
+                  match play, one course a month, with a championship round in October. It tracks the round-robin
+                  schedule, live standings with league tiebreakers, team pages with adjusted handicaps, and a
+                  password-gated form league members use to submit their own results. Next.js Server Components and
+                  Server Actions over Drizzle ORM and Turso, deployed on Vercel.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-sm">
+                  <Trophy className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Live standings with head-to-head and margin-of-victory tiebreakers</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Calendar className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Round-robin schedule across five rounds plus a championship</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Users className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Team pages with adjusted handicaps used for net scoring</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Shield className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Password-gated result submission with HMAC-signed session cookies</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Database className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Drizzle ORM over Turso (libSQL) with Server Action mutations</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Button variant="default" asChild>
+                  <a href="https://clt-golf-league.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Visit Website
+                  </a>
+                </Button>
+                <Button variant="default" asChild>
+                  <a href="https://github.com/MattEberhart/clt-golf-league" target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" />
+                    View on GitHub
+                  </a>
+                </Button>
+              </div>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                <Badge variant="secondary">Next.js</Badge>
+                <Badge variant="secondary">TypeScript</Badge>
+                <Badge variant="secondary">Drizzle ORM</Badge>
+                <Badge variant="secondary">Turso</Badge>
+                <Badge variant="secondary">Zod</Badge>
+                <Badge variant="secondary">Vercel</Badge>
               </div>
             </CardContent>
           </Card>
