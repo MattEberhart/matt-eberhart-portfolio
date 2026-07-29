@@ -80,7 +80,7 @@ const projectsSchema = [
     name: "clt-golf-league",
     applicationCategory: "SportsApplication",
     operatingSystem: "Web",
-    description: "Queen City Match Play — a standings, schedule, and result tracking site for a six-team, twelve-player net match play golf league in Charlotte, North Carolina. Tracks the round-robin schedule, live standings with league tiebreakers, team pages with adjusted handicaps, and a password-gated form league members use to submit results. Built with Next.js Server Components and Server Actions over Drizzle ORM and Turso, deployed on Vercel.",
+    description: "Queen City Match Play — a standings, schedule, and result tracking site for my six-team, twelve-player net match play golf league in Charlotte, North Carolina. Tracks the round-robin schedule, live standings with league tiebreakers, team pages with adjusted handicaps, and a password-gated form league members use to submit results. Built with Next.js Server Components and Server Actions over Drizzle ORM and Turso, deployed on Vercel.",
     url: "https://clt-golf-league.vercel.app/",
     codeRepository: "https://github.com/MattEberhart/clt-golf-league",
     sameAs: [

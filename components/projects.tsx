@@ -210,7 +210,7 @@ export function Projects() {
                 <div className="space-y-2 flex-1">
                   <CardTitle className="text-2xl">clt-golf-league</CardTitle>
                   <CardDescription className="text-base">
-                    Standings, schedule, and result tracking for a Charlotte net match play golf league
+                    Standings, schedule, and result tracking for my Charlotte net match play golf league
                   </CardDescription>
                 </div>
                 <div className="rounded-lg bg-primary/10 p-3">
@@ -221,8 +221,9 @@ export function Projects() {
             <CardContent className="space-y-4">
               <div className="prose prose-sm text-muted-foreground max-w-none">
                 <p>
-                  Queen City Match Play is a site I built for a friend{"'"}s six-team, twelve-player golf league — net
-                  match play, one course a month, with a championship round in October. It tracks the round-robin
+                  Queen City Match Play is the site I built for my six-team, twelve-player golf league — net match
+                  play, one course a month, with a championship round in October. A friend runs the league and I play
+                  in it, so I built the site we all use. It tracks the round-robin
                   schedule, live standings with league tiebreakers, team pages with adjusted handicaps, and a
                   password-gated form league members use to submit their own results. Next.js Server Components and
                   Server Actions over Drizzle ORM and Turso, deployed on Vercel.
