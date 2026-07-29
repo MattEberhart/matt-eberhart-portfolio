@@ -545,9 +545,10 @@ export function Projects() {
             <CardContent className="space-y-4">
               <div className="prose prose-sm text-muted-foreground max-w-none">
                 <p>
-                  A site for PJC Detailing, a premium mobile detailing service serving the Charlotte area. Showcases
-                  service packages with starting prices and customer reviews, and lets customers request an
-                  appointment online with their package pre-selected. Built with Next.js and deployed on Vercel.
+                  Built the site for PJC Detailing, the premium mobile detailing service that details my car in the
+                  Charlotte area. Customers browse packages and request an appointment online with their package
+                  pre-selected; bookings are stored in Supabase and surfaced in an admin portal, with Resend sending
+                  confirmation emails to both the customer and the owner. Codex-assisted build on Next.js and Vercel.
                 </p>
               </div>
 
@@ -561,12 +562,16 @@ export function Projects() {
                   <span className="text-muted-foreground">Service packages with transparent starting prices</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
-                  <MapPin className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Local SEO for Charlotte-area mobile detailing searches</span>
+                  <Mail className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Resend email notifications for customer and admins</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
-                  <Smartphone className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Mobile-first responsive design</span>
+                  <Shield className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Admin portal over Supabase for customers and appointments</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <MapPin className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Local SEO for Charlotte-area mobile detailing searches</span>
                 </div>
               </div>
 
@@ -581,9 +586,10 @@ export function Projects() {
 
               <div className="flex flex-wrap gap-2 pt-2">
                 <Badge variant="secondary">Next.js</Badge>
-                <Badge variant="secondary">React</Badge>
+                <Badge variant="secondary">Supabase</Badge>
+                <Badge variant="secondary">Resend</Badge>
                 <Badge variant="secondary">Vercel</Badge>
-                <Badge variant="secondary">Small Business</Badge>
+                <Badge variant="secondary">Codex</Badge>
               </div>
             </CardContent>
           </Card>

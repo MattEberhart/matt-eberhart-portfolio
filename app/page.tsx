@@ -166,7 +166,7 @@ const projectsSchema = [
     name: "pjc-detailing",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
-    description: "Marketing and booking site for PJC Detailing, a premium mobile car detailing business serving Charlotte, North Carolina. Showcases service packages with starting prices and customer reviews, and lets customers request an appointment online with their package pre-selected.",
+    description: "Marketing and booking site for PJC Detailing, a premium mobile car detailing business serving Charlotte, North Carolina. Customers browse service packages with starting prices and request an appointment online with their package pre-selected; bookings are stored in Supabase and managed through an admin portal, with Resend sending email notifications to the customer and the owner.",
     url: "https://pjcdetailing.com",
     sameAs: ["https://pjcdetailing.com"],
     author: {
@@ -177,8 +177,9 @@ const projectsSchema = [
     featureList: [
       "Online booking flow with package pre-selection",
       "Service packages with transparent starting prices",
+      "Resend email notifications for customer and admins",
+      "Admin portal over Supabase for customers and appointments",
       "Local SEO for Charlotte-area mobile detailing searches",
-      "Mobile-first responsive design",
     ],
   },
 ]
