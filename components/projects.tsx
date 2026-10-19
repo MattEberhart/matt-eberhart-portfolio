@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
-import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, Globe, DollarSign, Cpu, FileText, Sparkles, Calendar, Filter, Shield, Mail, FileCheck2, Github, MapPin, Trophy, Database } from "lucide-react"
+import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, Globe, DollarSign, Cpu, Sparkles, Calendar, Shield, Mail, FileCheck2, Github, MapPin, Trophy, Database, Lock, ListOrdered } from "lucide-react"
 import Image from "next/image"
 
 export function Projects() {
@@ -283,6 +283,68 @@ export function Projects() {
             <CardHeader>
               <div className="flex items-start justify-between gap-4">
                 <div className="space-y-2 flex-1">
+                  <CardTitle className="text-2xl">jacobs-sheet</CardTitle>
+                  <CardDescription className="text-base">
+                    Password-protected fantasy football dashboard for weekly DraftKings contest standings
+                  </CardDescription>
+                </div>
+                <div className="rounded-lg bg-primary/10 p-3">
+                  <Lock className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="prose prose-sm text-muted-foreground max-w-none">
+                <p>
+                  Jacob&apos;s Sheet is the dashboard I built for my fantasy football league&apos;s weekly DraftKings
+                  contests, tracking DK Points for contest scoring and Kurt Credits for the season-long ledger. I&apos;m
+                  the commissioner, so I use the Submit view each week to enter all 15 scores, review the automatic
+                  ranking, and copy a group-chat recap. The site also holds a reconciled 2022-2025 historical archive
+                  imported from the league&apos;s original spreadsheets. Built on Next.js 16 and Turso serverless
+                  SQLite, deployed on Vercel.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-sm">
+                  <ListOrdered className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Live standings ranked by Kurt Credits or average DK Points</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Calendar className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Weekly results view with each contest&apos;s finish and score</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Shield className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Password-gated viewer access, separate from the bearer-secret ingest API</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Database className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Turso serverless SQLite with immutable, idempotency-keyed week uploads</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Button variant="default" asChild>
+                  <a href="https://jacobs-sheet.vercel.app" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Visit Website
+                  </a>
+                </Button>
+              </div>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                <Badge variant="secondary">Next.js</Badge>
+                <Badge variant="secondary">Turso</Badge>
+                <Badge variant="secondary">Vercel</Badge>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <div className="flex items-start justify-between gap-4">
+                <div className="space-y-2 flex-1">
                   <CardTitle className="text-2xl">pjc-detailing</CardTitle>
                   <CardDescription className="text-base">
                     Marketing and booking site for a mobile car detailing business in Charlotte, NC
@@ -502,172 +564,6 @@ export function Projects() {
             </CardContent>
           </Card>
 
-          <Card className="overflow-hidden hover:shadow-lg transition-shadow relative">
-            <CardHeader>
-              <div className="space-y-2 pr-[220px]">
-                <CardTitle className="text-2xl">aspen-takehome</CardTitle>
-                <CardDescription className="text-base">
-                  Take-home interview project for Aspen — AI-powered PDF generator for financial advisors
-                </CardDescription>
-              </div>
-            </CardHeader>
-            <div className="absolute top-[3.5rem] right-6 w-[200px] hidden md:block">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <button type="button" className="block w-full cursor-zoom-in rounded-lg overflow-hidden hover:opacity-90 transition">
-                    <Image
-                      src="/images/aspen-takehome.png"
-                      alt="aspen-takehome sample PDF output for financial advisor client deliverable"
-                      width={200}
-                      height={600}
-                      className="w-full h-auto object-contain rounded-lg"
-                    />
-                  </button>
-                </DialogTrigger>
-                <DialogContent className="max-w-[95vw] sm:max-w-6xl p-2">
-                  <Image
-                    src="/images/aspen-takehome.png"
-                    alt="aspen-takehome sample PDF output for financial advisor client deliverable"
-                    width={1920}
-                    height={1440}
-                    className="w-full h-auto max-h-[85vh] object-contain rounded-lg mx-auto"
-                  />
-                </DialogContent>
-              </Dialog>
-            </div>
-            <CardContent className="space-y-4">
-              <div className="md:pr-[220px] space-y-4">
-                <div className="prose prose-sm text-muted-foreground max-w-none">
-                  <p>
-                    Natural-language prompts like &quot;create a retirement plan review for Susie&quot; produce branded,
-                    multi-page PDF client deliverables. Uses multi-phase agentic orchestration with the Claude API to
-                    drive a research → content → render pipeline, with Puppeteer rendering live React components
-                    straight to PDF.
-                  </p>
-                </div>
-
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2 text-sm">
-                    <Sparkles className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground">Multi-phase agentic orchestration with Claude API</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <FileText className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground">Puppeteer renders live React components to branded PDFs</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Users className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground">Content personalized to client profile (age, goals, assets)</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Cpu className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground">Server-side streaming (SSE) for real-time generation progress</span>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-3">
-                  <Button variant="default" asChild>
-                    <a href="https://github.com/MattEberhart/aspen-takehome" target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-4 w-4" />
-                      View on GitHub
-                    </a>
-                  </Button>
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">Next.js</Badge>
-                  <Badge variant="secondary">TypeScript</Badge>
-                  <Badge variant="secondary">Claude API</Badge>
-                  <Badge variant="secondary">Puppeteer</Badge>
-                  <Badge variant="secondary">Take-Home</Badge>
-                </div>
-              </div>
-              <div className="block md:hidden mt-4">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <button type="button" className="block w-full cursor-zoom-in rounded-lg overflow-hidden hover:opacity-90 transition">
-                      <Image
-                        src="/images/aspen-takehome.png"
-                        alt="aspen-takehome sample PDF output for financial advisor client deliverable"
-                        width={200}
-                        height={600}
-                        className="w-full h-auto object-contain rounded-lg"
-                      />
-                    </button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-4xl p-2">
-                    <Image
-                      src="/images/aspen-takehome.png"
-                      alt="aspen-takehome sample PDF output for financial advisor client deliverable"
-                      width={1600}
-                      height={1200}
-                      className="w-full h-auto max-h-[85vh] object-contain rounded-lg mx-auto"
-                    />
-                  </DialogContent>
-                </Dialog>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="flex items-start justify-between gap-4">
-                <div className="space-y-2 flex-1">
-                  <CardTitle className="text-2xl">ebvents</CardTitle>
-                  <CardDescription className="text-base">
-                    Take-home interview project for Fastbreak AI — sporting event management dashboard
-                  </CardDescription>
-                </div>
-                <div className="rounded-lg bg-primary/10 p-3">
-                  <Calendar className="h-8 w-8 text-primary" />
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="prose prose-sm text-muted-foreground max-w-none">
-                <p>
-                  A full-stack event management platform with multi-venue scheduling, dual card/table dashboard views,
-                  and multi-auth support. Built with Next.js 16, Supabase (with RLS), Cloudflare Images, and shadcn/ui.
-                </p>
-              </div>
-
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-sm">
-                  <Calendar className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Multi-venue event scheduling with card & table dashboard views</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Filter className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Advanced filtering, search, and sorting</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Shield className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Multi-auth: email/password, OTP, Google OAuth (Supabase + RLS)</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Camera className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Image uploads via Cloudflare CDN</span>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-3 pt-2">
-                <Button variant="default" asChild>
-                  <a href="https://github.com/MattEberhart/ebvents" target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" />
-                    View on GitHub
-                  </a>
-                </Button>
-              </div>
-
-              <div className="flex flex-wrap gap-2 pt-2">
-                <Badge variant="secondary">Next.js</Badge>
-                <Badge variant="secondary">Supabase</Badge>
-                <Badge variant="secondary">Cloudflare Images</Badge>
-                <Badge variant="secondary">shadcn/ui</Badge>
-                <Badge variant="secondary">Take-Home</Badge>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
