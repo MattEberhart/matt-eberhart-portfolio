@@ -53,6 +53,31 @@ const projectsSchema = [
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    name: "second-nature",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    description: "Site for Second Nature Creative Studio, a Charlotte, North Carolina business spanning creative/digital marketing consulting (Studio) and curated event rental packages (Gatherings). Visitors build their own rental estimate with a live delivery-cost quote and book a consultation that creates a Google Calendar event with an auto-generated Meet link. An admin dashboard over Supabase manages the catalog, settings, and leads, with Resend sending confirmation and notification emails.",
+    url: "https://www.secondnaturecreative.com",
+    codeRepository: "https://github.com/MattEberhart/second-nature",
+    sameAs: [
+      "https://www.secondnaturecreative.com",
+      "https://github.com/MattEberhart/second-nature",
+    ],
+    author: {
+      "@type": "Person",
+      name: "Matt Eberhart",
+      url: siteUrl,
+    },
+    featureList: [
+      "Build-your-own estimate tool with live delivery-cost quotes",
+      "Consultation booking synced to Google Calendar with auto-generated Meet links",
+      "Admin dashboard over Supabase for catalog, settings, and lead management",
+      "Resend-powered confirmation and notification emails",
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
     name: "paul-ai",
     applicationCategory: "BotApplication",
     applicationSubCategory: "Chatbot",
@@ -162,26 +187,6 @@ const projectsSchema = [
       "Multi-revision bid workflow (Draft → Review → Approve → PDF)",
       "Role-based review with RLS-backed auth",
       "Three-stage pipeline: ITBs → Bids → Jobs",
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "lyd-portfolio",
-    applicationCategory: "WebApplication",
-    operatingSystem: "Web",
-    description: "Rebuilt a small business website with Next.js and Vercel to eliminate a $30/month subscription cost. Built using Claude Code for AI-assisted development.",
-    url: "https://solyd-strategies.vercel.app/",
-    sameAs: ["https://solyd-strategies.vercel.app/"],
-    author: {
-      "@type": "Person",
-      name: "Matt Eberhart",
-      url: siteUrl,
-    },
-    featureList: [
-      "Custom Next.js build replacing website builder subscription",
-      "Deployed on Vercel at zero hosting cost",
-      "AI-assisted development with Claude Code",
     ],
   },
 ]
