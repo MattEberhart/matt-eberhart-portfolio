@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
-import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, Globe, DollarSign, Cpu, Sparkles, Calendar, Shield, Mail, FileCheck2, Github, MapPin, Trophy, Database, Lock, ListOrdered } from "lucide-react"
+import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, DollarSign, Sparkles, Calendar, Shield, Mail, FileCheck2, Github, MapPin, Trophy, Database, Lock, ListOrdered, Palette } from "lucide-react"
 import Image from "next/image"
 
 export function Projects() {
@@ -94,6 +94,77 @@ export function Projects() {
                 <Badge variant="secondary">iOS</Badge>
                 <Badge variant="secondary">Social</Badge>
                 <Badge variant="secondary">Photo Sharing</Badge>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <div className="flex items-start justify-between gap-4">
+                <div className="space-y-2 flex-1">
+                  <CardTitle className="text-2xl">second-nature</CardTitle>
+                  <CardDescription className="text-base">
+                    Studio and event-rental site for a Charlotte, NC creative business
+                  </CardDescription>
+                </div>
+                <div className="rounded-lg bg-primary/10 p-3">
+                  <Palette className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="prose prose-sm text-muted-foreground max-w-none">
+                <p>
+                  Second Nature Creative Studio spans two service lines: Studio, for creative and digital marketing
+                  consulting, and Gatherings, for curated event rental packages. Visitors build their own rental
+                  estimate and get a live delivery-cost quote, then book a consultation that&apos;s created directly
+                  on the owner&apos;s Google Calendar with an auto-generated Meet link. An admin dashboard over
+                  Supabase manages the catalog, settings, and incoming leads, with Resend sending confirmation and
+                  notification emails. Built with Next.js, Supabase, and the Google Calendar and Routes APIs,
+                  deployed on Vercel.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-sm">
+                  <DollarSign className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Build-your-own estimate tool with live delivery-cost quotes</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Calendar className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Consultation booking synced to Google Calendar with auto-generated Meet links</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Shield className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Admin dashboard over Supabase for catalog, settings, and lead management</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Mail className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Resend-powered confirmation and notification emails</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Button variant="default" asChild>
+                  <a href="https://www.secondnaturecreative.com" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Visit Website
+                  </a>
+                </Button>
+                <Button variant="default" asChild>
+                  <a href="https://github.com/MattEberhart/second-nature" target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" />
+                    View on GitHub
+                  </a>
+                </Button>
+              </div>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                <Badge variant="secondary">Next.js</Badge>
+                <Badge variant="secondary">Supabase</Badge>
+                <Badge variant="secondary">Resend</Badge>
+                <Badge variant="secondary">Google Calendar API</Badge>
+                <Badge variant="secondary">Vercel</Badge>
               </div>
             </CardContent>
           </Card>
@@ -503,63 +574,6 @@ export function Projects() {
                     />
                   </DialogContent>
                 </Dialog>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="flex items-start justify-between gap-4">
-                <div className="space-y-2 flex-1">
-                  <CardTitle className="text-2xl">lyd-portfolio</CardTitle>
-                  <CardDescription className="text-base">
-                    Cloned and rebuilt my fiancée{"'"}s business website to eliminate a $30/month subscription cost
-                  </CardDescription>
-                </div>
-                <div className="rounded-lg bg-primary/10 p-3">
-                  <Globe className="h-8 w-8 text-primary" />
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="prose prose-sm text-muted-foreground max-w-none">
-                <p>
-                  Used Claude Code to clone and rebuild the website my fiancée Lydia was paying $30/month for —
-                  saving her the recurring cost entirely. The original site (solydstrategies.com) is a social media
-                  management and graphic design business based in Charlotte, NC. Rebuilt with Next.js and deployed on
-                  Vercel.
-                </p>
-              </div>
-
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-sm">
-                  <DollarSign className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Eliminated $30/month website builder subscription</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Cpu className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Built with Claude Code — AI-assisted development</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Globe className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Deployed on Vercel with zero hosting cost</span>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-3 pt-2">
-                <Button variant="default" asChild>
-                  <a href="https://solyd-strategies.vercel.app/" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    View Site
-                  </a>
-                </Button>
-              </div>
-
-              <div className="flex flex-wrap gap-2 pt-2">
-                <Badge variant="secondary">Next.js</Badge>
-                <Badge variant="secondary">React</Badge>
-                <Badge variant="secondary">Vercel</Badge>
-                <Badge variant="secondary">Claude Code</Badge>
               </div>
             </CardContent>
           </Card>
