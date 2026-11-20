@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
-import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, DollarSign, Sparkles, Calendar, Shield, Mail, FileCheck2, Github, MapPin, Trophy, Database, Lock, ListOrdered, Palette } from "lucide-react"
+import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, DollarSign, Calendar, Shield, Mail, Github, Trophy, Database, Lock, ListOrdered, Palette } from "lucide-react"
 import Image from "next/image"
 
 export function Projects() {
@@ -54,15 +54,15 @@ export function Projects() {
 
               <div className="flex flex-wrap gap-3 pt-2">
                 <Button variant="default" asChild>
-                  <a href="https://mybndr.com" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Visit Website
-                  </a>
-                </Button>
-                <Button variant="default" asChild>
                   <a href="https://apps.apple.com/us/app/bndr/id6749908487" target="_blank" rel="noopener noreferrer">
                     <Smartphone className="mr-2 h-4 w-4" />
                     Download on App Store
+                  </a>
+                </Button>
+                <Button variant="default" asChild>
+                  <a href="https://mybndr.com" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Visit Website
                   </a>
                 </Button>
                 <Button variant="default" asChild>
@@ -151,8 +151,76 @@ export function Projects() {
                     Visit Website
                   </a>
                 </Button>
+              </div>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                <Badge variant="secondary">Next.js</Badge>
+                <Badge variant="secondary">Supabase</Badge>
+                <Badge variant="secondary">Resend</Badge>
+                <Badge variant="secondary">Google Calendar API</Badge>
+                <Badge variant="secondary">Vercel</Badge>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <div className="flex items-start justify-between gap-4">
+                <div className="space-y-2 flex-1">
+                  <CardTitle className="text-2xl">clt-golf-league</CardTitle>
+                  <CardDescription className="text-base">
+                    Standings, schedule, and result tracking for my Charlotte net match play golf league
+                  </CardDescription>
+                </div>
+                <div className="rounded-lg bg-primary/10 p-3">
+                  <Trophy className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="prose prose-sm text-muted-foreground max-w-none">
+                <p>
+                  Queen City Match Play is the site I built for my six-team, twelve-player golf league — net match
+                  play, one course a month, with a championship round in October. A friend runs the league and I play
+                  in it, so I built the site we all use. It tracks the round-robin
+                  schedule, live standings with league tiebreakers, team pages with adjusted handicaps, and a
+                  password-gated form league members use to submit their own results. Next.js Server Components and
+                  Server Actions over Drizzle ORM and Turso, deployed on Vercel.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-sm">
+                  <Trophy className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Live standings with head-to-head and margin-of-victory tiebreakers</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Calendar className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Round-robin schedule across five rounds plus a championship</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Users className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Team pages with adjusted handicaps used for net scoring</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Shield className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Password-gated result submission with HMAC-signed session cookies</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Database className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Drizzle ORM over Turso (libSQL) with Server Action mutations</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3 pt-2">
                 <Button variant="default" asChild>
-                  <a href="https://github.com/MattEberhart/second-nature" target="_blank" rel="noopener noreferrer">
+                  <a href="https://clt-golf-league.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Visit Website
+                  </a>
+                </Button>
+                <Button variant="default" asChild>
+                  <a href="https://github.com/MattEberhart/clt-golf-league" target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" />
                     View on GitHub
                   </a>
@@ -161,9 +229,10 @@ export function Projects() {
 
               <div className="flex flex-wrap gap-2 pt-2">
                 <Badge variant="secondary">Next.js</Badge>
-                <Badge variant="secondary">Supabase</Badge>
-                <Badge variant="secondary">Resend</Badge>
-                <Badge variant="secondary">Google Calendar API</Badge>
+                <Badge variant="secondary">TypeScript</Badge>
+                <Badge variant="secondary">Drizzle ORM</Badge>
+                <Badge variant="secondary">Turso</Badge>
+                <Badge variant="secondary">Zod</Badge>
                 <Badge variant="secondary">Vercel</Badge>
               </div>
             </CardContent>
@@ -279,81 +348,6 @@ export function Projects() {
             <CardHeader>
               <div className="flex items-start justify-between gap-4">
                 <div className="space-y-2 flex-1">
-                  <CardTitle className="text-2xl">clt-golf-league</CardTitle>
-                  <CardDescription className="text-base">
-                    Standings, schedule, and result tracking for my Charlotte net match play golf league
-                  </CardDescription>
-                </div>
-                <div className="rounded-lg bg-primary/10 p-3">
-                  <Trophy className="h-8 w-8 text-primary" />
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="prose prose-sm text-muted-foreground max-w-none">
-                <p>
-                  Queen City Match Play is the site I built for my six-team, twelve-player golf league — net match
-                  play, one course a month, with a championship round in October. A friend runs the league and I play
-                  in it, so I built the site we all use. It tracks the round-robin
-                  schedule, live standings with league tiebreakers, team pages with adjusted handicaps, and a
-                  password-gated form league members use to submit their own results. Next.js Server Components and
-                  Server Actions over Drizzle ORM and Turso, deployed on Vercel.
-                </p>
-              </div>
-
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-sm">
-                  <Trophy className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Live standings with head-to-head and margin-of-victory tiebreakers</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Calendar className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Round-robin schedule across five rounds plus a championship</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Users className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Team pages with adjusted handicaps used for net scoring</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Shield className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Password-gated result submission with HMAC-signed session cookies</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Database className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Drizzle ORM over Turso (libSQL) with Server Action mutations</span>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-3 pt-2">
-                <Button variant="default" asChild>
-                  <a href="https://clt-golf-league.vercel.app/" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Visit Website
-                  </a>
-                </Button>
-                <Button variant="default" asChild>
-                  <a href="https://github.com/MattEberhart/clt-golf-league" target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" />
-                    View on GitHub
-                  </a>
-                </Button>
-              </div>
-
-              <div className="flex flex-wrap gap-2 pt-2">
-                <Badge variant="secondary">Next.js</Badge>
-                <Badge variant="secondary">TypeScript</Badge>
-                <Badge variant="secondary">Drizzle ORM</Badge>
-                <Badge variant="secondary">Turso</Badge>
-                <Badge variant="secondary">Zod</Badge>
-                <Badge variant="secondary">Vercel</Badge>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="flex items-start justify-between gap-4">
-                <div className="space-y-2 flex-1">
                   <CardTitle className="text-2xl">jacobs-sheet</CardTitle>
                   <CardDescription className="text-base">
                     Password-protected fantasy football dashboard for weekly DraftKings contest standings
@@ -408,172 +402,6 @@ export function Projects() {
                 <Badge variant="secondary">Next.js</Badge>
                 <Badge variant="secondary">Turso</Badge>
                 <Badge variant="secondary">Vercel</Badge>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="flex items-start justify-between gap-4">
-                <div className="space-y-2 flex-1">
-                  <CardTitle className="text-2xl">pjc-detailing</CardTitle>
-                  <CardDescription className="text-base">
-                    Marketing and booking site for a mobile car detailing business in Charlotte, NC
-                  </CardDescription>
-                </div>
-                <div className="rounded-lg bg-primary/10 p-3">
-                  <Sparkles className="h-8 w-8 text-primary" />
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="prose prose-sm text-muted-foreground max-w-none">
-                <p>
-                  Built the site for PJC Detailing, the premium mobile detailing service that details my car in the
-                  Charlotte area. Customers browse packages and request an appointment online with their package
-                  pre-selected; bookings are stored in Supabase and surfaced in an admin portal, with Resend sending
-                  confirmation emails to both the customer and the owner. Codex-assisted build on Next.js and Vercel.
-                </p>
-              </div>
-
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-sm">
-                  <Calendar className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Online booking flow with package pre-selection</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <DollarSign className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Service packages with transparent starting prices</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Mail className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Resend email notifications for customer and admins</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Shield className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Admin portal over Supabase for customers and appointments</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <MapPin className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">Local SEO for Charlotte-area mobile detailing searches</span>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-3 pt-2">
-                <Button variant="default" asChild>
-                  <a href="https://pjcdetailing.com" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Visit Website
-                  </a>
-                </Button>
-              </div>
-
-              <div className="flex flex-wrap gap-2 pt-2">
-                <Badge variant="secondary">Next.js</Badge>
-                <Badge variant="secondary">Supabase</Badge>
-                <Badge variant="secondary">Resend</Badge>
-                <Badge variant="secondary">Vercel</Badge>
-                <Badge variant="secondary">Codex</Badge>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="overflow-hidden hover:shadow-lg transition-shadow relative">
-            <CardHeader>
-              <div className="space-y-2 pr-[220px]">
-                <CardTitle className="text-2xl">cape-epoxy</CardTitle>
-                <CardDescription className="text-base">
-                  Bespoke CRM and bid-management platform for a real epoxy sub-contractor
-                </CardDescription>
-              </div>
-            </CardHeader>
-            <div className="absolute top-[3.5rem] right-6 w-[200px] hidden md:block">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <button type="button" className="block w-full cursor-zoom-in rounded-lg overflow-hidden hover:opacity-90 transition">
-                    <Image
-                      src="/images/cape-epoxy.png"
-                      alt="cape-epoxy CRM and bid-management dashboard screenshot"
-                      width={200}
-                      height={600}
-                      className="w-full h-auto object-contain rounded-lg"
-                    />
-                  </button>
-                </DialogTrigger>
-                <DialogContent className="max-w-[95vw] sm:max-w-6xl p-2">
-                  <Image
-                    src="/images/cape-epoxy.png"
-                    alt="cape-epoxy CRM and bid-management dashboard screenshot"
-                    width={1920}
-                    height={1440}
-                    className="w-full h-auto max-h-[85vh] object-contain rounded-lg mx-auto"
-                  />
-                </DialogContent>
-              </Dialog>
-            </div>
-            <CardContent className="space-y-4">
-              <div className="md:pr-[220px] space-y-4">
-                <div className="prose prose-sm text-muted-foreground max-w-none">
-                  <p>
-                    A custom-built CRM that replaces a fragmented stack (BuildingConnected, Stack CT, Housecall Pro,
-                    Asana, Google Sheets) with a single unified system. Automates a three-stage pipeline: ITB intake
-                    via Gmail label watch, multi-revision bid creation with PDF delivery, and job tracking. My friend
-                    Louis and I are building a business around bespoke contractor software, with Cape Epoxy as our
-                    first client.
-                  </p>
-                </div>
-
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2 text-sm">
-                    <Mail className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground">Automatic ITB ingestion via Gmail label watch + Pub/Sub</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <FileCheck2 className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground">Multi-revision bid workflow (Draft → Review → Approve → PDF)</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Shield className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground">Role-based review with RLS-backed auth</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <TrendingUp className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground">Three-stage pipeline: ITBs → Bids → Jobs</span>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">Next.js</Badge>
-                  <Badge variant="secondary">Supabase</Badge>
-                  <Badge variant="secondary">Gmail API</Badge>
-                  <Badge variant="secondary">Cloudflare R2</Badge>
-                  <Badge variant="secondary">Resend</Badge>
-                  <Badge variant="secondary">TanStack Query</Badge>
-                </div>
-              </div>
-              <div className="block md:hidden mt-4">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <button type="button" className="block w-full cursor-zoom-in rounded-lg overflow-hidden hover:opacity-90 transition">
-                      <Image
-                        src="/images/cape-epoxy.png"
-                        alt="cape-epoxy CRM and bid-management dashboard screenshot"
-                        width={200}
-                        height={600}
-                        className="w-full h-auto object-contain rounded-lg"
-                      />
-                    </button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-4xl p-2">
-                    <Image
-                      src="/images/cape-epoxy.png"
-                      alt="cape-epoxy CRM and bid-management dashboard screenshot"
-                      width={1600}
-                      height={1200}
-                      className="w-full h-auto max-h-[85vh] object-contain rounded-lg mx-auto"
-                    />
-                  </DialogContent>
-                </Dialog>
               </div>
             </CardContent>
           </Card>
