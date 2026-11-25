@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
-import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, DollarSign, Calendar, Shield, Mail, Github, Trophy, Database, Lock, ListOrdered, Palette } from "lucide-react"
+import { Smartphone, Users, Camera, TrendingUp, ExternalLink, Instagram, Bot, MessageSquare, CheckCircle, DollarSign, Calendar, Shield, Mail, Github, Trophy, Database, Lock, ListOrdered, Palette, Cake, Image as ImageIcon, Search } from "lucide-react"
 import Image from "next/image"
 
 export function Projects() {
@@ -158,6 +158,134 @@ export function Projects() {
                 <Badge variant="secondary">Supabase</Badge>
                 <Badge variant="secondary">Resend</Badge>
                 <Badge variant="secondary">Google Calendar API</Badge>
+                <Badge variant="secondary">Vercel</Badge>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <div className="flex items-start justify-between gap-4">
+                <div className="space-y-2 flex-1">
+                  <CardTitle className="text-2xl">ebvents</CardTitle>
+                  <CardDescription className="text-base">
+                    Client-management platform for wedding and event venues, built into each venue&apos;s own website
+                  </CardDescription>
+                </div>
+                <div className="rounded-lg bg-primary/10 p-3">
+                  <Calendar className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="prose prose-sm text-muted-foreground max-w-none">
+                <p>
+                  ebvents replaces the rate sheets, contracts, and estimates venues trade as email attachments with one
+                  place on the venue&apos;s own site. The venue, couple, and planners all work on a single live estimate
+                  that locks automatically before the event, with line items generated from a versioned price book and
+                  rules like staffing per seated guest. Couples sign in to a portal on the venue&apos;s domain to build
+                  menus, manage guests and tables, and track contract and deposit steps. One multi-tenant Next.js app
+                  serves every venue by hostname, on Neon Postgres with row-level security, Drizzle ORM, self-hosted
+                  Better Auth, and Resend, deployed on Vercel.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-sm">
+                  <DollarSign className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">One shared live estimate driven by a rule-based pricing engine, auto-locked before the event</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Users className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Client portal for menus, meal counts, guests, tables, and collaborators</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Calendar className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Inquiries with availability, consultations, and reservation invites that hold dates</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Shield className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Hostname-based multi-tenancy with Postgres row-level security and venue-branded sign-in</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Mail className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Branded emails, reminders, and nightly jobs per venue</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Button variant="default" asChild>
+                  <a href="https://ebvents.com" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Visit Website
+                  </a>
+                </Button>
+              </div>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                <Badge variant="secondary">Next.js</Badge>
+                <Badge variant="secondary">Neon Postgres</Badge>
+                <Badge variant="secondary">Drizzle ORM</Badge>
+                <Badge variant="secondary">Better Auth</Badge>
+                <Badge variant="secondary">Resend</Badge>
+                <Badge variant="secondary">Vercel</Badge>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <div className="flex items-start justify-between gap-4">
+                <div className="space-y-2 flex-1">
+                  <CardTitle className="text-2xl">adams-good-baker</CardTitle>
+                  <CardDescription className="text-base">
+                    Landing page and bake-request form for a Birmingham, AL home bakery
+                  </CardDescription>
+                </div>
+                <div className="rounded-lg bg-primary/10 p-3">
+                  <Cake className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="prose prose-sm text-muted-foreground max-w-none">
+                <p>
+                  Adams Good Baker is a home bakery in Birmingham, Alabama making celebration cakes, cupcakes,
+                  decorated sugar cookies, cheesecakes, and breads. The site showcases the bakery&apos;s offerings, a
+                  photo gallery, and an FAQ. Customers send bake requests with their date, occasion, and headcount
+                  through a form that emails the baker via Resend, and she replies with a quote straight to the
+                  customer. Built with Next.js and Tailwind CSS, deployed on Vercel.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-sm">
+                  <Mail className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Bake-request form (date, occasion, headcount) delivered by Resend with reply-to set to the customer</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <ImageIcon className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">Offerings showcase and photo gallery of the bakery&apos;s work</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Search className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">SEO with Bakery and FAQPage JSON-LD, sitemap, and Open Graph image</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Button variant="default" asChild>
+                  <a href="https://adamsgoodbaker.com" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Visit Website
+                  </a>
+                </Button>
+              </div>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                <Badge variant="secondary">Next.js</Badge>
+                <Badge variant="secondary">Tailwind CSS</Badge>
+                <Badge variant="secondary">Resend</Badge>
                 <Badge variant="secondary">Vercel</Badge>
               </div>
             </CardContent>
